@@ -1,0 +1,39 @@
+.companyInfo{
+    display: flex;
+}
+
+.logo{
+    height:62px; 
+    margin-right:20px;
+}
+
+.name{
+    text-align: left;
+    font-size: 24px;
+    padding: 0;
+    color: #333;
+    font-weight: bold;
+    margin: 0;
+}
+
+.address{
+    font-size: 16px;
+    color: #333;
+    margin:8px 0px 0px 0px;
+}
+
+
+@media screen and (max-width:500px){
+    .logo{
+        height:48px;
+    }
+    .name{
+        font-size: 20px;
+    }
+    .address{
+        font-size: 14px;
+    }
+    .companyInfo{
+        align-items: center;
+    }
+}
