@@ -2,7 +2,10 @@ import React from 'react'
 import { TextField } from '@material-ui/core';
 import Autocomplete from '@material-ui/lab/Autocomplete';
 import { useDispatch, useSelector } from 'react-redux';
-import { updateEmployeeId } from '../actions';
+import {
+    updateEmployeeId,
+    updateEmployeeInfo
+} from '../actions';
 
 function EmployeeId() {
 
@@ -16,7 +19,12 @@ function EmployeeId() {
             freeSolo
             id="employeeIdAutocomplete"
             disableClearable
-            options={employeeIds.map((option) => option)}
+            options={employeeIds}
+            getOptionLabel={(option) => option.id}
+            onChange={(event, newValue) => {
+                dispatch(updateEmployeeId(newValue.id));
+                dispatch(updateEmployeeInfo(newValue.data));
+            }}
             renderInput={(params) => (
                 <TextField
                     {...params}
@@ -31,6 +39,7 @@ function EmployeeId() {
                 />
             )}
         />
+
     )
 }
 

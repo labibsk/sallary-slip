@@ -18,13 +18,10 @@ function SlipFor() {
                 inputVariant="outlined"
                 margin="none"
                 fullWidth={true}
-                id="date-picker-inline"
+                id="paySlipFor"
                 label="Payslip For"
                 value={date}
                 onChange={(date) => dispatch(updateDate(date))}
-                KeyboardButtonProps={{
-                    'aria-label': 'change date',
-                }}
             />
         </MuiPickersUtilsProvider>
     )

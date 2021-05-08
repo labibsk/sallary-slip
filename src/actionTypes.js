@@ -22,6 +22,7 @@ export const INCOME_TAX = "INCOME_TAX";
 export const ARREARS = "ARREARS";
 export const EMPLOYEE_IDS = "EMPLOYEE_IDS";
 
+export const EMPLOYEE_INFO = "EMPLOYEE_INFO";
 
 // Errors
 export const EMPLOYEE_ID_ERROR = "EMPLOYEE_ID_ERROR";

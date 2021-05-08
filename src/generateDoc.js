@@ -2,13 +2,17 @@ import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
 import PizZipUtils from "pizzip/utils/index.js";
 import { saveAs } from "file-saver";
+import { format } from "date-fns";
+import { db } from "./firebase";
+import store from "./store";
+import { updateState } from "./actions";
 
 function loadFile(url, callback) {
     PizZipUtils.getBinaryContent(url, callback);
 }
 
-export default () => {
-    loadFile("https://docxtemplater.com/tag-example.docx", function (
+const generateDoc = (data) => {
+    loadFile("https://ismail-creatvt.github.io/salaryslip/document/template.docx", function (
         error,
         content
     ) {
@@ -17,12 +21,7 @@ export default () => {
         }
         var zip = new PizZip(content);
         var doc = new Docxtemplater().loadZip(zip);
-        doc.setData({
-            first_name: "John",
-            last_name: "Doe",
-            phone: "0652455478",
-            description: "New Website"
-        });
+        doc.setData(data);
         try {
             // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
             doc.render();
@@ -60,5 +59,31 @@ export default () => {
             mimeType:
                 "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         }); //Output the document using Data-URI
-        saveAs(out, "output.docx");
-    });
+
+        const fileName = `Salary_Slip_${data.employeeId}_${format(data.dateObject, "MMM_yyyy")}`
+
+        saveAs(out, fileName + ".docx");
+        db.collection("employeeIds").doc(data.employeeId).set({
+            pan: data.pan,
+            bankName: data.bankName,
+            bankAccountNo: data.bankAccountNo,
+            dateOfJoining: data.dateOfJoining,
+            dateOfSeperation: data.dateOfSeperation,
+            monthlyGross: data.monthlyGross,
+            monthlyBasic: data.monthlyBasic,
+            basic: data.basic,
+            conveyanceAllowance: data.conveyanceAllowance,
+            incentive: data.incentive,
+            incomeTax: data.incomeTax,
+            arrears: data.arrears
+        }).then(() => {
+            store.dispatch(updateState());
+            console.log("Document Written successfully");
+        }).catch((error) => {
+            store.dispatch(updateState());
+            console.log("Error while writing document");
+        });
+    })
+};
+
+export default generateDoc;

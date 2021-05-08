@@ -27,7 +27,7 @@ function LeaveInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="opening"
                     label="Opening"
                     variant="outlined"
                     type="number"
@@ -38,7 +38,7 @@ function LeaveInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="earned"
                     label="Earned"
                     variant="outlined"
                     type="number"
@@ -51,7 +51,7 @@ function LeaveInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="availed"
                     label="Availed"
                     variant="outlined"
                     type="number"
@@ -62,7 +62,7 @@ function LeaveInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="closing"
                     label="Closing"
                     variant="outlined"
                     type="number"

@@ -1,5 +1,5 @@
 import './App.css';
-import React, { Fragment, useLayoutEffect, useRef, useState } from 'react';
+import React, { Fragment, useEffect, useLayoutEffect, useRef, useState } from 'react';
 import 'date-fns';
 import EmployeeInfo from './components/EmployeeInfo';
 import Header from './components/Header';
@@ -12,6 +12,9 @@ import { makeStyles, useMediaQuery } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab'
 import { PictureAsPdf } from '@material-ui/icons';
 import onSaveClick from './save';
+import { db } from './firebase';
+import { useDispatch } from 'react-redux';
+import { updateEmployeeIds } from './actions';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -32,6 +35,22 @@ function App() {
   const [visible, setVisible] = useState(true);
 
   const isMobile = useMediaQuery("(max-width: 500px)")
+
+  const dispatch = useDispatch();
+
+  const getEmployeeIds = () => {
+    db.collection("employeeIds").onSnapshot((snapshot) => {
+      const ids = snapshot.docs.map((doc) => ({
+        id: doc.id,
+        data: doc.data()
+      }));
+      dispatch(updateEmployeeIds(ids));
+    })
+  }
+
+  useEffect(() => {
+    getEmployeeIds();
+  }, [])
 
   useLayoutEffect(() => {
     const handleScroll = () => {

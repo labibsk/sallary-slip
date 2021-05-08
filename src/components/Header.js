@@ -18,7 +18,7 @@ function Header() {
 
                 <TextField
                     className="horizontalItem"
-                    id="outlined-basic"
+                    id="companyPan"
                     label="Company PAN"
                     variant="outlined"
                     fullWidth={true}

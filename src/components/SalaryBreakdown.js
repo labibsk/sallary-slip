@@ -21,10 +21,11 @@ function SalaryBreakdown() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="basic"
                     label="Basic"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={basic}
                     onChange={(e) => dispatch(updateBasic(e.target.value))} />
                 <TextField
@@ -34,15 +35,17 @@ function SalaryBreakdown() {
                     label="Conveyance Allowance"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={conveyanceAllowance}
                     onChange={(e) => dispatch(updateConveyanceAllowance(e.target.value))} />
             </div>
 
             <TextField
-                id="outlined-basic"
+                id="incentive"
                 label="Incentive"
                 variant="outlined"
                 type="number"
+                autoComplete="off"
                 value={incentive}
                 onChange={(e) => dispatch(updateIncentive(e.target.value))} />
 
@@ -50,19 +53,21 @@ function SalaryBreakdown() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="incomeTax"
                     label="Income Tax (TDS)"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={incomeTax}
                     onChange={(e) => dispatch(updateIncomeTax(e.target.value))} />
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="arrears"
                     label="Arrears"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={arrears}
                     onChange={(e) => dispatch(updateArrears(e.target.value))} />
             </div>

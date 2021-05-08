@@ -1,4 +1,5 @@
 import * as actionTypes from './actionTypes';
+import { parse } from 'date-fns';
 
 export function updateDate(value) {
     return {
@@ -265,5 +266,32 @@ export function updateArrearsError(value) {
     return {
         type: actionTypes.ARREARS_ERROR,
         payload: value
+    }
+}
+
+export function updateEmployeeInfo(data) {
+    return {
+        type: actionTypes.EMPLOYEE_INFO,
+        payload: {
+            pan: data.pan,
+            bankName: data.bankName,
+            bankAccountNo: data.bankAccountNo,
+            dateOfJoining: parse(data.dateOfJoining, "dd MMM yyyy", new Date()),
+            hasSeperated: data.dateOfSeperation !== "N/A",
+            dateOfSeperation: data.dateOfSeperation === "N/A" ? new Date() : parse(data.dateOfSeperation, "dd MMM yyyy", new Date()),
+            monthlyGross: data.monthlyGross,
+            monthlyBasic: data.monthlyBasic,
+            basic: data.basic,
+            conveyanceAllowance: data.conveyanceAllowance,
+            incentive: data.incentive,
+            incomeTax: data.incomeTax,
+            arrears: data.arrears
+        }
+    }
+}
+
+export function updateState() {
+    return {
+        type: "STATE"
     }
 }

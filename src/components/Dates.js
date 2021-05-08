@@ -24,7 +24,7 @@ function Dates() {
                     variant="inline"
                     inputVariant="outlined"
                     margin="none"
-                    id="date-picker-inline"
+                    id="dateOfJoining"
                     label="Date of Joining"
                     format="MMM, dd yyyy"
                     value={dateOfJoining}
@@ -52,7 +52,7 @@ function Dates() {
                             variant="inline"
                             inputVariant="outlined"
                             margin="none"
-                            id="date-picker-inline"
+                            id="dateOfSeperation"
                             label="Date of Seperation"
                             format="MMM, dd yyyy"
                             value={dateOfSeperation}

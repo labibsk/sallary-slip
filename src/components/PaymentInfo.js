@@ -26,10 +26,11 @@ function PaymentInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="daysMonth"
                     label="Days Month"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={daysMonth}
                     error={daysMonthError}
                     helperText={daysMonthError ? "Please Enter Days Month" : ""}
@@ -37,10 +38,11 @@ function PaymentInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="daysPayable"
                     label="Days Payable"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={daysPayable}
                     error={daysPayableError}
                     helperText={daysPayableError ? "Please Enter Days Payable" : ""}
@@ -50,10 +52,11 @@ function PaymentInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="monthlyBasic"
                     label="Monthly Basic"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={monthlyBasic}
                     error={monthlyBasicError}
                     helperText={monthlyBasicError ? "Please Enter Monthly Basic" : ""}
@@ -61,10 +64,11 @@ function PaymentInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="monthlyGross"
                     label="Monthly Gross"
                     variant="outlined"
                     type="number"
+                    autoComplete="off"
                     value={monthlyGross}
                     error={monthlyGrossError}
                     helperText={monthlyGrossError ? "Please Enter Monthly Gross" : ""}
@@ -72,11 +76,12 @@ function PaymentInfo() {
             </div>
 
             <TextField
-                id="outlined-basic"
+                id="pan"
                 label="PAN"
                 variant="outlined"
                 value={pan}
                 error={panError}
+                autoComplete="off"
                 helperText={panError ? "Please Enter PAN" : ""}
                 onChange={(e) => dispatch(updatePan(e.target.value))} />
         </Card>

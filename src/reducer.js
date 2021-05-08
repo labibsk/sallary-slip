@@ -1,9 +1,15 @@
 import * as actionTypes from './actionTypes';
 
+function monthDays(date) {
+    var d = new Date(date.getFullYear(), date.getMonth() + 1, 0);
+    return d.getDate();
+}
+
 const today = new Date();
+const daysMonth = monthDays(today);
 const initial = {
     date: today,
-    companyPan: '',
+    companyPan: 'IIHPS1460P',
     employeeId: '',
     dateOfJoining: today,
     hasSeperated: false,
@@ -12,7 +18,7 @@ const initial = {
     bankAccountNo: '',
     monthlyGross: '',
     monthlyBasic: '',
-    daysMonth: '',
+    daysMonth: daysMonth.toString(),
     daysPayable: '',
     pan: '',
     opening: '',
@@ -24,9 +30,7 @@ const initial = {
     incentive: '',
     incomeTax: '',
     arrears: '',
-    employeeIds: [
-        "2986",
-    ]
+    employeeIds: []
 }
 
 export default function reducer(state = initial, action) {
@@ -74,6 +78,7 @@ export default function reducer(state = initial, action) {
         case actionTypes.INCENTIVE_ERROR: return { ...state, incentiveError: action.payload }
         case actionTypes.INCOME_TAX_ERROR: return { ...state, incomeTaxError: action.payload }
         case actionTypes.ARREARS_ERROR: return { ...state, arrearsError: action.payload }
+        case actionTypes.EMPLOYEE_INFO: return { ...state, ...action.payload }
         default: return { ...initial };
     }
 }

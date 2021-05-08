@@ -23,7 +23,7 @@ function EmployeeInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="bankName"
                     label="Bank name"
                     variant="outlined"
                     value={bankName}
@@ -33,7 +33,7 @@ function EmployeeInfo() {
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
-                    id="outlined-basic"
+                    id="bankAccountNo"
                     label="Bank A/c No"
                     variant="outlined"
                     value={bankAccountNo}
