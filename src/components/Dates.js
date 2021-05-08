@@ -1,5 +1,5 @@
 import React from 'react'
-import { KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { DatePicker, KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from '@date-io/date-fns';
 import './Dates.css'
 import Checkbox from '@material-ui/core/Checkbox';
@@ -19,7 +19,7 @@ function Dates() {
         <div className="Dates">
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
 
-                <KeyboardDatePicker
+                <DatePicker
                     autoOk
                     variant="inline"
                     inputVariant="outlined"
@@ -47,7 +47,7 @@ function Dates() {
                         label="Seperated"
                     />
                     {hasSeperated &&
-                        <KeyboardDatePicker style={{ flexGrow: '1' }}
+                        <DatePicker style={{ flexGrow: '1' }}
                             autoOk
                             variant="inline"
                             inputVariant="outlined"

@@ -16,6 +16,7 @@ import { db } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateEmployeeIds } from './actions';
 import SavingDialog from './components/SavingDialog';
+import GetApp from '@material-ui/icons/GetApp';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -81,7 +82,7 @@ function App() {
           {
             isMobile && <Fab onClick={onSaveClick}
               style={{ position: "fixed", bottom: "20px", zIndex: "10", right: "20px", transition: "transform 300ms", transform: visible ? "translateY(0%)" : "translateY(150%)" }} color="primary" variant="extended">
-              <PictureAsPdf className={classes.extendedIcon} />  Save to PDF
+              <GetApp className={classes.extendedIcon} />  Download Payslip
             </Fab>
           }
 

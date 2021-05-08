@@ -1,7 +1,7 @@
 import React from 'react'
 import './NavBar.css'
 import Fab from '@material-ui/core/Fab'
-import { PictureAsPdf } from '@material-ui/icons';
+import GetAppIcon from '@material-ui/icons/GetApp';
 import CompanyInfo from './CompanyInfo';
 
 
@@ -11,7 +11,7 @@ function NavBar({ visible, isMobile, classes, onSaveClick }) {
         <div className={"NavBar " + (visible ? "NavBar__normal" : "NavBar__hidden")}>
             <CompanyInfo />
             {!isMobile && <Fab onClick={onSaveClick} color="primary" variant="extended">
-                <PictureAsPdf className={classes.extendedIcon} />  Save to PDF
+                <GetAppIcon className={classes.extendedIcon} />  Download Payslip
             </Fab>}
         </div>
     )
