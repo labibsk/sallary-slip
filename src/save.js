@@ -1,23 +1,5 @@
 import store from './store';
 import {
-    updateEmployeeIdError,
-    updateEmployeeNameError,
-    updateCompanyPanError,
-    updatePanError,
-    updateBankNameError,
-    updateBankAccountNoError,
-    updateMonthlyBasicError,
-    updateMonthlyGrossError,
-    updateDaysMonthError,
-    updateDaysPayableError,
-    updateOpeningError,
-    updateEarnedError,
-    updateAvailedError,
-    updateClosingError,
-    updateBasicError,
-    updateConveyanceAllowanceError,
-    updateIncentiveError,
-    updateIncomeTaxError,
     updateArrearsError,
     updateSavingMessage,
     updateSaving
@@ -33,7 +15,6 @@ const onSaveClick = () => {
     if (!isFormValid(store)) {
         return;
     }
-    window.webkitRequestFileSystem(window.TEMPORARY, 1024 * 1024, SaveDatFileBro);
 
     store.dispatch(updateArrearsError(false));
     store.dispatch(updateSavingMessage("Generating Salary slip"));
