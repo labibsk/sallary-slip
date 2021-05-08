@@ -25,10 +25,8 @@ const generateDoc = (data) => {
         var doc = new Docxtemplater().loadZip(zip);
         doc.setData(data);
         try {
-            // render the document (replace all occurences of {first_name} by John, {last_name} by Doe, ...)
             doc.render();
         } catch (error) {
-            // The error thrown here contains additional information when logged with JSON.stringify (it contains a properties object containing all suberrors).
             function replaceErrors(key, value) {
                 if (value instanceof Error) {
                     return Object.getOwnPropertyNames(value).reduce(function (

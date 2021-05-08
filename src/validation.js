@@ -21,7 +21,7 @@ import {
 } from './actions';
 
 export default function isFormValid(store) {
-    const state = store.state;
+    const state = store.getState();
 
     if (state.companyPan.length === 0) {
         store.dispatch(updateCompanyPanError(true));
