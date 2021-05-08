@@ -174,7 +174,8 @@ const onSaveClick = () => {
         arrears: arrears.toFixed(2),
         totalEarnings: totalEarnings.toFixed(2),
         totalDeductions: totalDeductions.toFixed(2),
-        netPayable: `${netPayable.toFixed(2)}\n${convert(netPayable)}`
+        netPayable: `${netPayable.toFixed(2)}`,
+        netPayableInWords: `${convert(netPayable)}`
     }
     generateDoc(data);
 };
