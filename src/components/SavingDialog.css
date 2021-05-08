@@ -1,0 +1,20 @@
+.SavingDialog{
+    width:100%;
+    height:100%;
+    background-color: #e6e6e67a;
+    z-index: 100;
+    position:fixed;
+    display:flex;
+    gap: 30px;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    top:0;
+    left:0;
+}
+
+.message{
+    font-size: 24px;
+    font-weight: bold;
+    color:rgb(36, 36, 36);
+}

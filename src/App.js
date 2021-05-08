@@ -13,8 +13,9 @@ import Fab from '@material-ui/core/Fab'
 import { PictureAsPdf } from '@material-ui/icons';
 import onSaveClick from './save';
 import { db } from './firebase';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { updateEmployeeIds } from './actions';
+import SavingDialog from './components/SavingDialog';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -64,10 +65,11 @@ function App() {
     }
   }, [])
 
+  const open = useSelector(state => state.saving);
 
   return (
     <Fragment>
-      <div className="App">
+      <div className={"App " + (open ? "no_scroll" : "scroll")}>
         <NavBar visible={visible} isMobile={isMobile} classes={classes} onSaveClick={onSaveClick} />
         <div className="Container">
           <Header />
@@ -83,6 +85,9 @@ function App() {
             </Fab>
           }
 
+          {
+            open && <SavingDialog />
+          }
         </div>
       </div>
     </Fragment>

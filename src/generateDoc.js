@@ -5,7 +5,7 @@ import { saveAs } from "file-saver";
 import { format } from "date-fns";
 import { db } from "./firebase";
 import store from "./store";
-import { updateState } from "./actions";
+import { reset, updateSaving, updateSavingMessage, updateState } from "./actions";
 
 function loadFile(url, callback) {
     PizZipUtils.getBinaryContent(url, callback);
@@ -63,6 +63,8 @@ const generateDoc = (data) => {
         const fileName = `Salary_Slip_${data.employeeId}_${format(data.dateObject, "MMM_yyyy")}`
 
         saveAs(out, fileName + ".docx");
+
+        store.dispatch(updateSavingMessage("Saving Employee data..."));
         db.collection("employeeIds").doc(data.employeeId).set({
             pan: data.pan,
             bankName: data.bankName,
@@ -77,10 +79,14 @@ const generateDoc = (data) => {
             incomeTax: data.incomeTax,
             arrears: data.arrears
         }).then(() => {
-            store.dispatch(updateState());
+            store.dispatch(updateSavingMessage(""));
+            store.dispatch(updateSaving(false))
+            store.dispatch(reset());
             console.log("Document Written successfully");
         }).catch((error) => {
-            store.dispatch(updateState());
+            store.dispatch(updateSavingMessage(""));
+            store.dispatch(updateSaving(false))
+            store.dispatch(reset());
             console.log("Error while writing document");
         });
     })

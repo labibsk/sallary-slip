@@ -30,7 +30,9 @@ const initial = {
     incentive: '',
     incomeTax: '',
     arrears: '',
-    employeeIds: []
+    employeeIds: [],
+    saving: false,
+    savingMessage: 'Saving..'
 }
 
 export default function reducer(state = initial, action) {
@@ -58,6 +60,8 @@ export default function reducer(state = initial, action) {
         case actionTypes.INCOME_TAX: return { ...state, incomeTax: action.payload }
         case actionTypes.ARREARS: return { ...state, arrears: action.payload }
         case actionTypes.EMPLOYEE_IDS: return { ...state, employeeIds: action.payload }
+        case actionTypes.SAVING: return { ...state, saving: action.payload }
+        case actionTypes.SAVING_MESSAGE: return { ...state, savingMessage: action.payload }
 
         // Errors
         case actionTypes.EMPLOYEE_ID_ERROR: return { ...state, employeeIdError: action.payload }
@@ -79,6 +83,8 @@ export default function reducer(state = initial, action) {
         case actionTypes.INCOME_TAX_ERROR: return { ...state, incomeTaxError: action.payload }
         case actionTypes.ARREARS_ERROR: return { ...state, arrearsError: action.payload }
         case actionTypes.EMPLOYEE_INFO: return { ...state, ...action.payload }
+        case actionTypes.RESET: return { ...initial, employeeIds: state.employeeIds }
+
         default: return { ...initial };
     }
 }

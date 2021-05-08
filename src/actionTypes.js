@@ -21,8 +21,11 @@ export const INCENTIVE = "INCENTIVE";
 export const INCOME_TAX = "INCOME_TAX";
 export const ARREARS = "ARREARS";
 export const EMPLOYEE_IDS = "EMPLOYEE_IDS";
+export const SAVING = "SAVING";
+export const SAVING_MESSAGE = "SAVING_MESSAGE";
 
 export const EMPLOYEE_INFO = "EMPLOYEE_INFO";
+export const RESET = "RESET";
 
 // Errors
 export const EMPLOYEE_ID_ERROR = "EMPLOYEE_ID_ERROR";

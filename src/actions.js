@@ -269,6 +269,20 @@ export function updateArrearsError(value) {
     }
 }
 
+export function updateSaving(value) {
+    return {
+        type: actionTypes.SAVING,
+        payload: value
+    }
+}
+
+export function updateSavingMessage(value) {
+    return {
+        type: actionTypes.SAVING_MESSAGE,
+        payload: value
+    }
+}
+
 export function updateEmployeeInfo(data) {
     return {
         type: actionTypes.EMPLOYEE_INFO,
@@ -293,5 +307,11 @@ export function updateEmployeeInfo(data) {
 export function updateState() {
     return {
         type: "STATE"
+    }
+}
+
+export function reset() {
+    return {
+        type: actionTypes.RESET
     }
 }

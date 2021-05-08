@@ -17,7 +17,9 @@ import {
     updateConveyanceAllowanceError,
     updateIncentiveError,
     updateIncomeTaxError,
-    updateArrearsError
+    updateArrearsError,
+    updateSavingMessage,
+    updateSaving
 } from './actions';
 import generateDoc from './generateDoc';
 import { format } from 'date-fns';
@@ -135,6 +137,9 @@ const onSaveClick = () => {
         return;
     }
     store.dispatch(updateArrearsError(false));
+    store.dispatch(updateSavingMessage("Generating Salary slip"));
+    store.dispatch(updateSaving(true));
+
     const basic = (parseFloat(state.basic) || 0);
     const conveyanceAllowance = (parseFloat(state.conveyanceAllowance) || 0);
     const incentive = (parseFloat(state.incentive) || 0);
