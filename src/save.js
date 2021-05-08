@@ -25,124 +25,16 @@ import {
 import generateDoc from './generateDoc';
 import { format } from 'date-fns';
 import convert from './convertToWords';
+import isFormValid from './validation';
 
 const onSaveClick = () => {
     const state = store.getState();
 
-    if (state.companyPan.length === 0) {
-        store.dispatch(updateCompanyPanError(true));
+    if (!isFormValid(store)) {
         return;
     }
-    store.dispatch(updateCompanyPanError(false));
+    window.webkitRequestFileSystem(window.TEMPORARY, 1024 * 1024, SaveDatFileBro);
 
-    if (state.employeeId.length === 0) {
-        store.dispatch(updateEmployeeIdError(true));
-        return;
-    }
-    store.dispatch(updateEmployeeIdError(false));
-
-    if (state.employeeName.length === 0) {
-        store.dispatch(updateEmployeeNameError(true));
-        return;
-    }
-    store.dispatch(updateEmployeeNameError(false));
-
-    if (state.bankName.length === 0) {
-        store.dispatch(updateBankNameError(true));
-        return;
-    }
-    store.dispatch(updateBankNameError(false));
-
-    if (state.bankAccountNo.length === 0) {
-        store.dispatch(updateBankAccountNoError(true));
-        return;
-    }
-    store.dispatch(updateBankAccountNoError(false));
-
-    if (state.daysMonth.length === 0) {
-        store.dispatch(updateDaysMonthError(true));
-        return;
-    }
-    store.dispatch(updateDaysMonthError(false));
-
-    if (state.daysPayable.length === 0) {
-        store.dispatch(updateDaysPayableError(true));
-        return;
-    }
-    store.dispatch(updateDaysPayableError(false));
-
-    if (state.monthlyBasic.length === 0) {
-        store.dispatch(updateMonthlyBasicError(true));
-        return;
-    }
-    store.dispatch(updateMonthlyBasicError(false));
-
-    if (state.monthlyGross.length === 0) {
-        store.dispatch(updateMonthlyGrossError(true));
-        return;
-    }
-    store.dispatch(updateMonthlyGrossError(false));
-
-
-    if (state.pan.length === 0) {
-        store.dispatch(updatePanError(true));
-        return;
-    }
-    store.dispatch(updatePanError(false));
-
-
-    if (state.opening.length === 0) {
-        store.dispatch(updateOpeningError(true));
-        return;
-    }
-    store.dispatch(updateOpeningError(false));
-
-    if (state.earned.length === 0) {
-        store.dispatch(updateEarnedError(true));
-        return;
-    }
-    store.dispatch(updateEarnedError(false));
-
-    if (state.availed.length === 0) {
-        store.dispatch(updateAvailedError(true));
-        return;
-    }
-    store.dispatch(updateAvailedError(false));
-
-    if (state.closing.length === 0) {
-        store.dispatch(updateClosingError(true));
-        return;
-    }
-    store.dispatch(updateClosingError(false));
-
-    if (state.basic.length === 0) {
-        store.dispatch(updateBasicError(true));
-        return;
-    }
-    store.dispatch(updateBasicError(false));
-
-    if (state.conveyanceAllowance.length === 0) {
-        store.dispatch(updateConveyanceAllowanceError(true));
-        return;
-    }
-    store.dispatch(updateConveyanceAllowanceError(false));
-
-    if (state.incentive.length === 0) {
-        store.dispatch(updateIncentiveError(true));
-        return;
-    }
-    store.dispatch(updateIncentiveError(false));
-
-    if (state.incomeTax.length === 0) {
-        store.dispatch(updateIncomeTaxError(true));
-        return;
-    }
-    store.dispatch(updateIncomeTaxError(false));
-
-    if (state.arrears.length === 0) {
-        store.dispatch(updateArrearsError(true));
-        return;
-    }
     store.dispatch(updateArrearsError(false));
     store.dispatch(updateSavingMessage("Generating Salary slip"));
     store.dispatch(updateSaving(true));
