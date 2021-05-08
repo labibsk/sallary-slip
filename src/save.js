@@ -41,6 +41,12 @@ const onSaveClick = () => {
     }
     store.dispatch(updateEmployeeIdError(false));
 
+    if (state.employeeName.length === 0) {
+        store.dispatch(updateEmployeeNameError(true));
+        return;
+    }
+    store.dispatch(updateEmployeeNameError(false));
+
     if (state.bankName.length === 0) {
         store.dispatch(updateBankNameError(true));
         return;
