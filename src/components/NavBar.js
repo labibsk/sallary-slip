@@ -7,7 +7,6 @@ import CompanyInfo from './CompanyInfo';
 
 function NavBar({ visible, isMobile, classes, onSaveClick }) {
 
-
     return (
         <div className={"NavBar " + (visible ? "NavBar__normal" : "NavBar__hidden")}>
             <CompanyInfo />

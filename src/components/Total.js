@@ -1,8 +1,15 @@
 import React from 'react'
 import { Card } from "@material-ui/core";
 import convertToWords from '../convertToWords'
+import { useSelector } from 'react-redux';
 
-function Total({ basic, conveyanceAllowance, incentive, incomeTax, arrears }) {
+function Total() {
+    const basic = useSelector(state => state.basic);
+    const conveyanceAllowance = useSelector(state => state.conveyanceAllowance);
+    const incentive = useSelector(state => state.incentive);
+    const incomeTax = useSelector(state => state.incomeTax);
+    const arrears = useSelector(state => state.arrears);
+
     const totalEarnings = ((parseFloat(basic) || 0) + (parseFloat(conveyanceAllowance) || 0) + (parseFloat(incentive) || 0)).toFixed(2)
     const totalDeductions = ((parseFloat(incomeTax) || 0) + (parseFloat(arrears) || 0)).toFixed(2)
     return (

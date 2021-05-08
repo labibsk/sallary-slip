@@ -1,19 +1,19 @@
 import React from 'react'
 import { Card } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateArrears, updateBasic, updateConveyanceAllowance, updateIncentive, updateIncomeTax } from '../actions';
 
-function SalaryStructureInfo({
-    basic,
-    conveyanceAllowance,
-    incentive,
-    incomeTax,
-    arrears,
-    setBasic,
-    setConveyanceAllowance,
-    setIncentive,
-    setIncomeTax,
-    setArrears,
-}) {
+function SalaryBreakdown() {
+
+    const basic = useSelector(state => state.basic);
+    const conveyanceAllowance = useSelector(state => state.conveyanceAllowance);
+    const incentive = useSelector(state => state.incentive);
+    const incomeTax = useSelector(state => state.incomeTax);
+    const arrears = useSelector(state => state.arrears);
+
+    const dispatch = useDispatch();
+
     return (
         <Card className="card">
             <p className="title">Salary Breakdown</p>
@@ -26,7 +26,7 @@ function SalaryStructureInfo({
                     variant="outlined"
                     type="number"
                     value={basic}
-                    onChange={(e) => setBasic(e.target.value)} />
+                    onChange={(e) => dispatch(updateBasic(e.target.value))} />
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
@@ -35,7 +35,7 @@ function SalaryStructureInfo({
                     variant="outlined"
                     type="number"
                     value={conveyanceAllowance}
-                    onChange={(e) => setConveyanceAllowance(e.target.value)} />
+                    onChange={(e) => dispatch(updateConveyanceAllowance(e.target.value))} />
             </div>
 
             <TextField
@@ -44,7 +44,7 @@ function SalaryStructureInfo({
                 variant="outlined"
                 type="number"
                 value={incentive}
-                onChange={(e) => setIncentive(e.target.value)} />
+                onChange={(e) => dispatch(updateIncentive(e.target.value))} />
 
             <div className="horizontal">
                 <TextField
@@ -55,7 +55,7 @@ function SalaryStructureInfo({
                     variant="outlined"
                     type="number"
                     value={incomeTax}
-                    onChange={(e) => setIncomeTax(e.target.value)} />
+                    onChange={(e) => dispatch(updateIncomeTax(e.target.value))} />
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
@@ -64,10 +64,10 @@ function SalaryStructureInfo({
                     variant="outlined"
                     type="number"
                     value={arrears}
-                    onChange={(e) => setArrears(e.target.value)} />
+                    onChange={(e) => dispatch(updateArrears(e.target.value))} />
             </div>
         </Card>
     )
 }
 
-export default SalaryStructureInfo
+export default SalaryBreakdown

@@ -1,4 +1,4 @@
-import actionTypes from './actionTypes';
+import * as actionTypes from './actionTypes';
 
 const today = new Date();
 const initial = {
@@ -23,7 +23,10 @@ const initial = {
     conveyanceAllowance: '',
     incentive: '',
     incomeTax: '',
-    arrears: ''
+    arrears: '',
+    employeeIds: [
+        "2986",
+    ]
 }
 
 export default function reducer(state = initial, action) {
@@ -50,5 +53,27 @@ export default function reducer(state = initial, action) {
         case actionTypes.INCENTIVE: return { ...state, incentive: action.payload }
         case actionTypes.INCOME_TAX: return { ...state, incomeTax: action.payload }
         case actionTypes.ARREARS: return { ...state, arrears: action.payload }
+        case actionTypes.EMPLOYEE_IDS: return { ...state, employeeIds: action.payload }
+
+        // Errors
+        case actionTypes.EMPLOYEE_ID_ERROR: return { ...state, employeeIdError: action.payload }
+        case actionTypes.COMPANY_PAN_ERROR: return { ...state, companyPanError: action.payload }
+        case actionTypes.PAN_ERROR: return { ...state, panError: action.payload }
+        case actionTypes.BANK_NAME_ERROR: return { ...state, bankNameError: action.payload }
+        case actionTypes.BANK_ACCOUNT_NO_ERROR: return { ...state, bankAccountNoError: action.payload }
+        case actionTypes.MONTHLY_BASIC_ERROR: return { ...state, monthlyBasicError: action.payload }
+        case actionTypes.MONTHLY_GROSS_ERROR: return { ...state, monthlyGrossError: action.payload }
+        case actionTypes.DAYS_MONTH_ERROR: return { ...state, daysMonthError: action.payload }
+        case actionTypes.DAYS_PAYABLE_ERROR: return { ...state, daysPayableError: action.payload }
+        case actionTypes.OPENING_ERROR: return { ...state, openingError: action.payload }
+        case actionTypes.EARNED_ERROR: return { ...state, earnedError: action.payload }
+        case actionTypes.AVAILED_ERROR: return { ...state, availedError: action.payload }
+        case actionTypes.CLOSING_ERROR: return { ...state, closingError: action.payload }
+        case actionTypes.BASIC_ERROR: return { ...state, basicError: action.payload }
+        case actionTypes.CONVEYANCE_ALLOWANCE_ERROR: return { ...state, conveyanceAllowanceError: action.payload }
+        case actionTypes.INCENTIVE_ERROR: return { ...state, incentiveError: action.payload }
+        case actionTypes.INCOME_TAX_ERROR: return { ...state, incomeTaxError: action.payload }
+        case actionTypes.ARREARS_ERROR: return { ...state, arrearsError: action.payload }
+        default: return { ...initial };
     }
 }

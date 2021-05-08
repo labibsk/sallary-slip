@@ -1,4 +1,4 @@
-import actionTypes from './actionTypes';
+import * as actionTypes from './actionTypes';
 
 export function updateDate(value) {
     return {
@@ -129,6 +129,141 @@ export function updateIncomeTax(value) {
 export function updateArrears(value) {
     return {
         type: actionTypes.ARREARS,
+        payload: value
+    }
+}
+
+export function updateEmployeeIds(value) {
+    return {
+        type: actionTypes.EMPLOYEE_IDS,
+        payload: value
+    }
+}
+
+
+// Errors
+export function updateEmployeeIdError(value) {
+    return {
+        type: actionTypes.EMPLOYEE_ID_ERROR,
+        payload: value
+    }
+}
+
+export function updateCompanyPanError(value) {
+    return {
+        type: actionTypes.COMPANY_PAN_ERROR,
+        payload: value
+    }
+}
+
+export function updatePanError(value) {
+    return {
+        type: actionTypes.PAN_ERROR,
+        payload: value
+    }
+}
+
+export function updateBankNameError(value) {
+    return {
+        type: actionTypes.BANK_NAME_ERROR,
+        payload: value
+    }
+}
+
+export function updateBankAccountNoError(value) {
+    return {
+        type: actionTypes.BANK_ACCOUNT_NO_ERROR,
+        payload: value
+    }
+}
+
+export function updateMonthlyBasicError(value) {
+    return {
+        type: actionTypes.MONTHLY_BASIC_ERROR,
+        payload: value
+    }
+}
+
+export function updateMonthlyGrossError(value) {
+    return {
+        type: actionTypes.MONTHLY_GROSS_ERROR,
+        payload: value
+    }
+}
+
+export function updateDaysMonthError(value) {
+    return {
+        type: actionTypes.DAYS_MONTH_ERROR,
+        payload: value
+    }
+}
+
+export function updateDaysPayableError(value) {
+    return {
+        type: actionTypes.DAYS_PAYABLE_ERROR,
+        payload: value
+    }
+}
+
+export function updateOpeningError(value) {
+    return {
+        type: actionTypes.OPENING_ERROR,
+        payload: value
+    }
+}
+
+export function updateEarnedError(value) {
+    return {
+        type: actionTypes.EARNED_ERROR,
+        payload: value
+    }
+}
+
+export function updateAvailedError(value) {
+    return {
+        type: actionTypes.AVAILED_ERROR,
+        payload: value
+    }
+}
+
+export function updateClosingError(value) {
+    return {
+        type: actionTypes.CLOSING_ERROR,
+        payload: value
+    }
+}
+
+export function updateBasicError(value) {
+    return {
+        type: actionTypes.BASIC_ERROR,
+        payload: value
+    }
+}
+
+export function updateConveyanceAllowanceError(value) {
+    return {
+        type: actionTypes.CONVEYANCE_ALLOWANCE_ERROR,
+        payload: value
+    }
+}
+
+export function updateIncentiveError(value) {
+    return {
+        type: actionTypes.INCENTIVE_ERROR,
+        payload: value
+    }
+}
+
+export function updateIncomeTaxError(value) {
+    return {
+        type: actionTypes.INCOME_TAX_ERROR,
+        payload: value
+    }
+}
+
+export function updateArrearsError(value) {
+    return {
+        type: actionTypes.ARREARS_ERROR,
         payload: value
     }
 }

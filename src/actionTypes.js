@@ -1,22 +1,44 @@
-export const DATE
-export const COMPANY_PAN
-export const EMPLOYEE_ID
-export const DATE_OF_JOINING
-export const HAS_SEPERATED
-export const DATE_OF_SEPERATION
-export const BANK_NAME
-export const BANK_ACCOUNT_NO
-export const MONTHLY_GROSS
-export const MONTHLY_BASIC
-export const DAYS_MONTH
-export const DAYS_PAYABLE
-export const PAN
-export const OPENING
-export const EARNED
-export const AVAILED
-export const CLOSING
-export const BASIC
-export const CONVEYANCE_ALLOWANCE
-export const INCENTIVE
-export const INCOME_TAX
-export const ARREARS
+export const DATE = "DATE";
+export const COMPANY_PAN = "COMPANY_PAN";
+export const EMPLOYEE_ID = "EMPLOYEE_ID";
+export const DATE_OF_JOINING = "DATE_OF_JOINING";
+export const HAS_SEPERATED = "HAS_SEPERATED";
+export const DATE_OF_SEPERATION = "DATE_OF_SEPERATION";
+export const BANK_NAME = "BANK_NAME";
+export const BANK_ACCOUNT_NO = "BANK_ACCOUNT_NO";
+export const MONTHLY_GROSS = "MONTHLY_GROSS";
+export const MONTHLY_BASIC = "MONTHLY_BASIC";
+export const DAYS_MONTH = "DAYS_MONTH";
+export const DAYS_PAYABLE = "DAYS_PAYABLE";
+export const PAN = "PAN";
+export const OPENING = "OPENING";
+export const EARNED = "EARNED";
+export const AVAILED = "AVAILED";
+export const CLOSING = "CLOSING";
+export const BASIC = "BASIC";
+export const CONVEYANCE_ALLOWANCE = "CONVEYANCE_ALLOWANCE";
+export const INCENTIVE = "INCENTIVE";
+export const INCOME_TAX = "INCOME_TAX";
+export const ARREARS = "ARREARS";
+export const EMPLOYEE_IDS = "EMPLOYEE_IDS";
+
+
+// Errors
+export const EMPLOYEE_ID_ERROR = "EMPLOYEE_ID_ERROR";
+export const COMPANY_PAN_ERROR = "COMPANY_PAN_ERROR";
+export const PAN_ERROR = "PAN_ERROR";
+export const BANK_NAME_ERROR = "BANK_NAME_ERROR";
+export const BANK_ACCOUNT_NO_ERROR = "BANK_ACCOUNT_NO_ERROR";
+export const MONTHLY_BASIC_ERROR = "MONTHLY_BASIC_ERROR";
+export const MONTHLY_GROSS_ERROR = "MONTHLY_GROSS_ERROR";
+export const DAYS_MONTH_ERROR = "DAYS_MONTH_ERROR";
+export const DAYS_PAYABLE_ERROR = "DAYS_PAYABLE_ERROR";
+export const OPENING_ERROR = "OPENING_ERROR";
+export const EARNED_ERROR = "EARNED_ERROR";
+export const AVAILED_ERROR = "AVAILED_ERROR";
+export const CLOSING_ERROR = "CLOSING_ERROR";
+export const BASIC_ERROR = "BASIC_ERROR";
+export const CONVEYANCE_ALLOWANCE_ERROR = "CONVEYANCE_ALLOWANCE_ERROR";
+export const INCENTIVE_ERROR = "INCENTIVE_ERROR";
+export const INCOME_TAX_ERROR = "INCOME_TAX_ERROR";
+export const ARREARS_ERROR = "ARREARS_ERROR";

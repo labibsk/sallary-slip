@@ -2,30 +2,23 @@ import React from 'react'
 import { Card } from "@material-ui/core";
 import TextField from '@material-ui/core/TextField';
 import Dates from './Dates';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateBankAccountNo, updateBankName } from '../actions';
 
-function EmployeeInfo({
-    dateOfJoining,
-    dateOfSeperation,
-    hasSeperated,
-    bankName,
-    bankAccountNo,
-    setDateOfJoining,
-    setDateOfSeperation,
-    setHasSeperated,
-    setBankName,
-    setBankAccountNo
-}) {
+function EmployeeInfo() {
+
+    const bankName = useSelector(state => state.bankName);
+    const bankAccountNo = useSelector(state => state.bankAccountNo);
+
+    const bankNameError = useSelector(state => state.bankNameError);
+    const bankAccountNoError = useSelector(state => state.bankAccountNoError);
+
+    const dispatch = useDispatch();
+
     return (
         <Card className="card">
             <p className="title">Employee Info</p>
-            <Dates
-                dateOfJoining={dateOfJoining}
-                dateOfSeperation={dateOfSeperation}
-                setDateOfJoining={setDateOfJoining}
-                setDateOfSeperation={setDateOfSeperation}
-                hasSeperated={hasSeperated}
-                setHasSeperated={setHasSeperated}
-            />
+            <Dates />
             <div className="horizontal">
                 <TextField
                     className="horizontalItem"
@@ -34,7 +27,9 @@ function EmployeeInfo({
                     label="Bank name"
                     variant="outlined"
                     value={bankName}
-                    onChange={(e) => setBankName(e.target.value)} />
+                    error={bankNameError}
+                    helperText={bankNameError ? "Please Enter Bank Name" : ""}
+                    onChange={(e) => dispatch(updateBankName(e.target.value))} />
                 <TextField
                     className="horizontalItem"
                     fullWidth={false}
@@ -42,7 +37,9 @@ function EmployeeInfo({
                     label="Bank A/c No"
                     variant="outlined"
                     value={bankAccountNo}
-                    onChange={(e) => setBankAccountNo(e.target.value)} />
+                    error={bankAccountNoError}
+                    helperText={bankAccountNoError ? "Please Enter Bank A/c No" : ""}
+                    onChange={(e) => dispatch(updateBankAccountNo(e.target.value))} />
             </div>
         </Card>
     )

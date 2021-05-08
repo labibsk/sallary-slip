@@ -4,11 +4,17 @@ import DateFnsUtils from '@date-io/date-fns';
 import './Dates.css'
 import Checkbox from '@material-ui/core/Checkbox';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
+import { useDispatch, useSelector } from 'react-redux';
+import { updateDateOfJoining, updateDateOfSeperation, updateHasSeperated } from '../actions';
 
-function Dates({ hasSeperated, setHasSeperated, dateOfSeperation, dateOfJoining, setDateOfSeperation, setDateOfJoining }) {
-    const onHasSeperatedChange = (event) => {
-        setHasSeperated(event.target.checked)
-    }
+function Dates() {
+
+    const dateOfJoining = useSelector(state => state.dateOfJoining);
+    const hasSeperated = useSelector(state => state.hasSeperated);
+    const dateOfSeperation = useSelector(state => state.dateOfSeperation);
+
+    const dispatch = useDispatch();
+
     return (
         <div className="Dates">
             <MuiPickersUtilsProvider utils={DateFnsUtils}>
@@ -22,7 +28,7 @@ function Dates({ hasSeperated, setHasSeperated, dateOfSeperation, dateOfJoining,
                     label="Date of Joining"
                     format="MMM, dd yyyy"
                     value={dateOfJoining}
-                    onChange={setDateOfJoining}
+                    onChange={(date) => dispatch(updateDateOfJoining(date))}
                     KeyboardButtonProps={{
                         'aria-label': 'change date',
                     }}
@@ -33,7 +39,7 @@ function Dates({ hasSeperated, setHasSeperated, dateOfSeperation, dateOfJoining,
                         control={
                             <Checkbox
                                 checked={hasSeperated}
-                                onChange={onHasSeperatedChange}
+                                onChange={(event) => dispatch(updateHasSeperated(event.target.checked))}
                                 name="Seperated"
                                 color="primary"
                             />
@@ -50,7 +56,7 @@ function Dates({ hasSeperated, setHasSeperated, dateOfSeperation, dateOfJoining,
                             label="Date of Seperation"
                             format="MMM, dd yyyy"
                             value={dateOfSeperation}
-                            onChange={setDateOfSeperation}
+                            onChange={(date) => dispatch(updateDateOfSeperation(date))}
                             KeyboardButtonProps={{
                                 'aria-label': 'change date',
                             }}

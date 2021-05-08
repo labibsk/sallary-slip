@@ -1,8 +1,13 @@
 import React from 'react'
 import { MuiPickersUtilsProvider, DatePicker } from "@material-ui/pickers";
 import DateFnsUtils from "@date-io/date-fns";
+import { updateDate } from '../actions';
+import { useSelector, useDispatch } from 'react-redux';
 
-function SlipFor({ payslipFor, setPayslipFor, payslipForError }) {
+function SlipFor() {
+    const date = useSelector(state => state.date);
+    const dispatch = useDispatch();
+
     return (
         <MuiPickersUtilsProvider utils={DateFnsUtils}>
 
@@ -12,12 +17,11 @@ function SlipFor({ payslipFor, setPayslipFor, payslipForError }) {
                 variant="inline"
                 inputVariant="outlined"
                 margin="none"
-                error={payslipForError}
                 fullWidth={true}
                 id="date-picker-inline"
                 label="Payslip For"
-                value={payslipFor}
-                onChange={setPayslipFor}
+                value={date}
+                onChange={(date) => dispatch(updateDate(date))}
                 KeyboardButtonProps={{
                     'aria-label': 'change date',
                 }}
