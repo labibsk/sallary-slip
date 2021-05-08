@@ -8,14 +8,6 @@
   gap:30px;
 }
 
-.scroll{
-  overflow-y: auto;
-}
-
-.no_scroll{
-  overflow-y: hidden;
-}
-
 .Container{
   min-width: 400px;
   max-width: 800px;

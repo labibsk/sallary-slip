@@ -70,7 +70,7 @@ function App() {
 
   return (
     <Fragment>
-      <div className={"App " + (open ? "no_scroll" : "scroll")}>
+      <div className="App">
         <NavBar visible={visible} isMobile={isMobile} classes={classes} onSaveClick={onSaveClick} />
         <div className="Container">
           <Header />
