@@ -11,6 +11,7 @@ const initial = {
     date: today,
     companyPan: 'IIHPS1460P',
     employeeId: '',
+    employeeName: '',
     dateOfJoining: today,
     hasSeperated: false,
     dateOfSeperation: today,
@@ -40,6 +41,7 @@ export default function reducer(state = initial, action) {
         case actionTypes.DATE: return { ...state, date: action.payload }
         case actionTypes.COMPANY_PAN: return { ...state, companyPan: action.payload }
         case actionTypes.EMPLOYEE_ID: return { ...state, employeeId: action.payload }
+        case actionTypes.EMPLOYEE_NAME: return { ...state, employeeName: action.payload }
         case actionTypes.DATE_OF_JOINING: return { ...state, dateOfJoining: action.payload }
         case actionTypes.HAS_SEPERATED: return { ...state, hasSeperated: action.payload }
         case actionTypes.DATE_OF_SEPERATION: return { ...state, dateOfSeperation: action.payload }
@@ -65,6 +67,7 @@ export default function reducer(state = initial, action) {
 
         // Errors
         case actionTypes.EMPLOYEE_ID_ERROR: return { ...state, employeeIdError: action.payload }
+        case actionTypes.EMPLOYEE_NAME_ERROR: return { ...state, employeeNameError: action.payload }
         case actionTypes.COMPANY_PAN_ERROR: return { ...state, companyPanError: action.payload }
         case actionTypes.PAN_ERROR: return { ...state, panError: action.payload }
         case actionTypes.BANK_NAME_ERROR: return { ...state, bankNameError: action.payload }

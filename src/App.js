@@ -10,7 +10,6 @@ import Total from './components/Total';
 import NavBar from './components/NavBar';
 import { makeStyles, useMediaQuery } from '@material-ui/core';
 import Fab from '@material-ui/core/Fab'
-import { PictureAsPdf } from '@material-ui/icons';
 import onSaveClick from './save';
 import { db } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';

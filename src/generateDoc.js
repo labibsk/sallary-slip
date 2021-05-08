@@ -67,6 +67,7 @@ const generateDoc = (data) => {
         store.dispatch(updateSavingMessage("Saving Employee data..."));
         db.collection("employeeIds").doc(data.employeeId).set({
             pan: data.pan,
+            employeeName: data.employeeName,
             bankName: data.bankName,
             bankAccountNo: data.bankAccountNo,
             dateOfJoining: data.dateOfJoining,

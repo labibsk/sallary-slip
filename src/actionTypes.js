@@ -1,6 +1,7 @@
 export const DATE = "DATE";
 export const COMPANY_PAN = "COMPANY_PAN";
 export const EMPLOYEE_ID = "EMPLOYEE_ID";
+export const EMPLOYEE_NAME = "EMPLOYEE_NAME";
 export const DATE_OF_JOINING = "DATE_OF_JOINING";
 export const HAS_SEPERATED = "HAS_SEPERATED";
 export const DATE_OF_SEPERATION = "DATE_OF_SEPERATION";
@@ -29,6 +30,7 @@ export const RESET = "RESET";
 
 // Errors
 export const EMPLOYEE_ID_ERROR = "EMPLOYEE_ID_ERROR";
+export const EMPLOYEE_NAME_ERROR = "EMPLOYEE_NAME_ERROR";
 export const COMPANY_PAN_ERROR = "COMPANY_PAN_ERROR";
 export const PAN_ERROR = "PAN_ERROR";
 export const BANK_NAME_ERROR = "BANK_NAME_ERROR";

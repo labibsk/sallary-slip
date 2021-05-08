@@ -1,6 +1,7 @@
 import store from './store';
 import {
     updateEmployeeIdError,
+    updateEmployeeNameError,
     updateCompanyPanError,
     updatePanError,
     updateBankNameError,
@@ -154,6 +155,7 @@ const onSaveClick = () => {
         date: format(state.date, "MMM yyyy"),
         companyPan: state.companyPan,
         employeeId: state.employeeId,
+        employeeName: state.employeeName,
         dateOfJoining: format(state.dateOfJoining, "dd MMM yyyy"),
         dateOfSeperation: state.hasSeperated ? format(state.dateOfSeperation, "dd MMM yyyy") : "N/A",
         bankName: state.bankName,

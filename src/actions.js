@@ -19,6 +19,12 @@ export function updateEmployeeId(value) {
         payload: value
     }
 }
+export function updateEmployeeName(value) {
+    return {
+        type: actionTypes.EMPLOYEE_NAME,
+        payload: value
+    }
+}
 export function updateDateOfJoining(value) {
     return {
         type: actionTypes.DATE_OF_JOINING,
@@ -146,6 +152,13 @@ export function updateEmployeeIds(value) {
 export function updateEmployeeIdError(value) {
     return {
         type: actionTypes.EMPLOYEE_ID_ERROR,
+        payload: value
+    }
+}
+
+export function updateEmployeeNameError(value) {
+    return {
+        type: actionTypes.EMPLOYEE_NAME_ERROR,
         payload: value
     }
 }
@@ -288,6 +301,7 @@ export function updateEmployeeInfo(data) {
         type: actionTypes.EMPLOYEE_INFO,
         payload: {
             pan: data.pan,
+            employeeName: data.employeeName,
             bankName: data.bankName,
             bankAccountNo: data.bankAccountNo,
             dateOfJoining: parse(data.dateOfJoining, "dd MMM yyyy", new Date()),
