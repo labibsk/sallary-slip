@@ -37,6 +37,7 @@ const initial = {
 }
 
 export default function reducer(state = initial, action) {
+    console.log("Reducer called : ", action)
     switch (action.type) {
         case actionTypes.DATE: return { ...state, date: action.payload }
         case actionTypes.COMPANY_PAN: return { ...state, companyPan: action.payload }

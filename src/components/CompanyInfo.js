@@ -1,4 +1,4 @@
-import logo from '../assets/edigital_wolf_logo.png'
+import logo from '../assets/digital_wolf_logo.png'
 import './companyinfo.css'
 import React from 'react'
 

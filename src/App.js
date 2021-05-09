@@ -14,8 +14,8 @@ import onSaveClick from './save';
 import { db } from './firebase';
 import { useDispatch, useSelector } from 'react-redux';
 import { updateEmployeeIds } from './actions';
-import SavingDialog from './components/SavingDialog';
 import GetApp from '@material-ui/icons/GetApp';
+import DownloadPayslipDialog from './components/DownloadPayslipDialog';
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -86,7 +86,7 @@ function App() {
           }
 
           {
-            open && <SavingDialog />
+            open && <DownloadPayslipDialog open={open} />
           }
         </div>
       </div>

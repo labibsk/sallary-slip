@@ -1,5 +1,5 @@
 import React from 'react'
-import { DatePicker, KeyboardDatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
+import { DatePicker, MuiPickersUtilsProvider } from "@material-ui/pickers";
 import DateFnsUtils from '@date-io/date-fns';
 import './Dates.css'
 import Checkbox from '@material-ui/core/Checkbox';

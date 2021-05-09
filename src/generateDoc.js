@@ -2,12 +2,8 @@ import Docxtemplater from "docxtemplater";
 import PizZip from "pizzip";
 import PizZipUtils from "pizzip/utils/index.js";
 import { saveAs } from "file-saver";
-import { format } from "date-fns";
-import { db } from "./firebase";
 import store from "./store";
-import { reset, updateSaving, updateSavingMessage, updateState } from "./actions";
-import { PDFDocument } from 'pdf-lib'
-import templatePDF from 'pdf-templater'
+import { updateSavingMessage } from "./actions";
 
 function loadFile(url, callback) {
     PizZipUtils.getBinaryContent(url, callback);
@@ -60,36 +56,9 @@ const generateDoc = (data) => {
                 "application/vnd.openxmlformats-officedocument.wordprocessingml.document"
         }); //Output the document using Data-URI
 
-        const fileName = `Salary_Slip_${data.employeeId}_${format(data.dateObject, "MMM_yyyy")}`
-
-        saveAs(out, fileName + ".docx");
+        saveAs(out, data.fileName + ".docx");
 
         store.dispatch(updateSavingMessage("Saving Employee data..."));
-        db.collection("employeeIds").doc(data.employeeId).set({
-            pan: data.pan,
-            employeeName: data.employeeName,
-            bankName: data.bankName,
-            bankAccountNo: data.bankAccountNo,
-            dateOfJoining: data.dateOfJoining,
-            dateOfSeperation: data.dateOfSeperation,
-            monthlyGross: data.monthlyGross,
-            monthlyBasic: data.monthlyBasic,
-            basic: data.basic,
-            conveyanceAllowance: data.conveyanceAllowance,
-            incentive: data.incentive,
-            incomeTax: data.incomeTax,
-            arrears: data.arrears
-        }).then(() => {
-            store.dispatch(updateSavingMessage(""));
-            store.dispatch(updateSaving(false))
-            store.dispatch(reset());
-            console.log("Document Written successfully");
-        }).catch((error) => {
-            store.dispatch(updateSavingMessage(""));
-            store.dispatch(updateSaving(false))
-            store.dispatch(reset());
-            console.log("Error while writing document");
-        });
     })
 };
 
