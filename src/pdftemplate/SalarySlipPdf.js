@@ -14,6 +14,7 @@ function SalarySlipPdf({ data }) {
                         addressLine1="Shri Siddhi Above SBI Bank, Sasane Nagar "
                         addressLine2="Hadapsar, Pune"
                         addressLine3="Maharashtra 411028"
+                        date={data.date}
                     />
                     <SalarySlipTable data={data} />
                 </Border>

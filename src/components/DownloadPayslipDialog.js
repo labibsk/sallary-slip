@@ -92,7 +92,7 @@ function DownloadPayslipDialog({ open }) {
                                 <PDFDownloadLink
                                     document={<SalarySlipPdf data={data} />}
                                     fileName={data.fileName}
-                                    onClick={(e) => saveToFirebase()}
+
                                     style={{
                                         textDecoration: "none",
                                         color: "#4a4a4a",
@@ -100,11 +100,16 @@ function DownloadPayslipDialog({ open }) {
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         backgroundColor: "#fff",
-                                    }}>{({ blob, url, loading, error }) =>
-                                        <Fragment>
+                                    }}>{({ blob, url, loading, error }) => {
+                                        if (!loading) {
+                                            saveToFirebase()
+                                        }
+                                        return (<Fragment>
                                             <img src={pdfLogo} style={{ width: "64px", height: "64px" }} alt="Word" />
                                             {loading && <CircularProgress style={{ position: 'absolute' }} />}
                                         </Fragment>
+                                        )
+                                    }
                                     }
                                 </PDFDownloadLink>
                             </Card>

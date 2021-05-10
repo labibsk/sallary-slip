@@ -5,7 +5,7 @@ import { FlexHorizontal } from './layouts'
 import { CompanyName, AddressLine } from './text'
 import styled from '@react-pdf/styled-components'
 
-function Header({ companyName, addressLine1, addressLine2, addressLine3 }) {
+function Header({ companyName, addressLine1, addressLine2, addressLine3, date }) {
     return (
         <FlexHorizontal>
             <Image src={logo} style={{ width: '65.05pt', height: '54pt' }} />
@@ -28,7 +28,7 @@ function Header({ companyName, addressLine1, addressLine2, addressLine3 }) {
                     Pay Slip
                 </TitleLine>
                 <SubTitleLine>
-                    Dec 2021
+                    {date}
                 </SubTitleLine>
             </PaySlipTitle>
         </FlexHorizontal>
