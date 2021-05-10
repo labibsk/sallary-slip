@@ -2,7 +2,7 @@ import React from 'react'
 import { FlexVertical } from './layouts'
 import { Row, MiddleCell, BottomCell } from "./tableComponents"
 
-function BankInfo({ bankName, bankAccountNo, pan }) {
+function BankInfo({ bankName, bankAccountNo, pan, aadhar }) {
     return (
         <FlexVertical>
             <Row>
@@ -14,8 +14,8 @@ function BankInfo({ bankName, bankAccountNo, pan }) {
             <Row>
                 <BottomCell>Bank A/c No</BottomCell>
                 <BottomCell>{bankAccountNo}</BottomCell>
-                <BottomCell />
-                <BottomCell />
+                <BottomCell>Aadhar</BottomCell>
+                <BottomCell>{aadhar}</BottomCell>
             </Row>
         </FlexVertical>
     )

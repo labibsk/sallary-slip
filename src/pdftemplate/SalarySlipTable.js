@@ -30,6 +30,7 @@ function SalarySlipTable({ data }) {
                 bankName={data.bankName}
                 bankAccountNo={data.bankAccountNo}
                 pan={data.pan}
+                aadhar={data.aadhar}
             />
             <Row>
                 <EmptyCell style={{ flexGrow: '1' }} />

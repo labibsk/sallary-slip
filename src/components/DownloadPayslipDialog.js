@@ -38,6 +38,7 @@ function DownloadPayslipDialog({ open }) {
             daysPayable: state.daysPayable,
             bankName: state.bankName,
             pan: state.pan,
+            aadhar: state.aadhar,
             bankAccountNo: state.bankAccountNo,
             basic: basic.toFixed(2),
             incomeTax: incomeTax.toFixed(2),
@@ -57,6 +58,7 @@ function DownloadPayslipDialog({ open }) {
     const saveToFirebase = () => {
         db.collection("employeeIds").doc(data.employeeId).set({
             pan: data.pan,
+            aadhar: data.aadhar,
             employeeName: data.employeeName,
             bankName: data.bankName,
             bankAccountNo: data.bankAccountNo,
