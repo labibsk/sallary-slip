@@ -1,12 +1,12 @@
 import firebase from 'firebase';
 
-var firebaseConfig = {
-    apiKey: "AIzaSyA5Lg_fmUADzUPrPoQdoY4tsvG7B1ffmI4",
-    authDomain: "salaryslip-c4984.firebaseapp.com",
-    projectId: "salaryslip-c4984",
-    storageBucket: "salaryslip-c4984.appspot.com",
-    messagingSenderId: "578613490566",
-    appId: "1:578613490566:web:7f2ef6173209875ecc3207"
+const firebaseConfig = {
+    apiKey: "AIzaSyBFhJsmdAirbA_kdVrlp5VztQ0mzu0VBv4",
+    authDomain: "salary-slip-35a4b.firebaseapp.com",
+    projectId: "salary-slip-35a4b",
+    storageBucket: "salary-slip-35a4b.appspot.com",
+    messagingSenderId: "291647738956",
+    appId: "1:291647738956:web:38883122da95e1f78ed0e9"
 };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
