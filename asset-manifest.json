@@ -1,24 +1,24 @@
 {
   "files": {
-    "main.css": "/salary-slip/static/css/main.745972c2.chunk.css",
-    "main.js": "/salary-slip/static/js/main.2a3294a2.chunk.js",
-    "main.js.map": "/salary-slip/static/js/main.2a3294a2.chunk.js.map",
-    "runtime-main.js": "/salary-slip/static/js/runtime-main.68b3bc23.js",
-    "runtime-main.js.map": "/salary-slip/static/js/runtime-main.68b3bc23.js.map",
-    "static/js/2.a2a410c6.chunk.js": "/salary-slip/static/js/2.a2a410c6.chunk.js",
-    "static/js/2.a2a410c6.chunk.js.map": "/salary-slip/static/js/2.a2a410c6.chunk.js.map",
-    "static/js/3.9bb8395b.chunk.js": "/salary-slip/static/js/3.9bb8395b.chunk.js",
-    "static/js/3.9bb8395b.chunk.js.map": "/salary-slip/static/js/3.9bb8395b.chunk.js.map",
-    "index.html": "/salary-slip/index.html",
-    "static/css/main.745972c2.chunk.css.map": "/salary-slip/static/css/main.745972c2.chunk.css.map",
-    "static/js/2.a2a410c6.chunk.js.LICENSE.txt": "/salary-slip/static/js/2.a2a410c6.chunk.js.LICENSE.txt",
-    "static/media/digital_wolf_logo.a4b84cc4.png": "/salary-slip/static/media/digital_wolf_logo.a4b84cc4.png",
-    "static/media/pdf.ba4a9de7.svg": "/salary-slip/static/media/pdf.ba4a9de7.svg",
-    "static/media/word.baefbedd.svg": "/salary-slip/static/media/word.baefbedd.svg"
+    "main.css": "/sallary-slip/static/css/main.745972c2.chunk.css",
+    "main.js": "/sallary-slip/static/js/main.2a3294a2.chunk.js",
+    "main.js.map": "/sallary-slip/static/js/main.2a3294a2.chunk.js.map",
+    "runtime-main.js": "/sallary-slip/static/js/runtime-main.fe4bc346.js",
+    "runtime-main.js.map": "/sallary-slip/static/js/runtime-main.fe4bc346.js.map",
+    "static/js/2.be733b0f.chunk.js": "/sallary-slip/static/js/2.be733b0f.chunk.js",
+    "static/js/2.be733b0f.chunk.js.map": "/sallary-slip/static/js/2.be733b0f.chunk.js.map",
+    "static/js/3.9bb8395b.chunk.js": "/sallary-slip/static/js/3.9bb8395b.chunk.js",
+    "static/js/3.9bb8395b.chunk.js.map": "/sallary-slip/static/js/3.9bb8395b.chunk.js.map",
+    "index.html": "/sallary-slip/index.html",
+    "static/css/main.745972c2.chunk.css.map": "/sallary-slip/static/css/main.745972c2.chunk.css.map",
+    "static/js/2.be733b0f.chunk.js.LICENSE.txt": "/sallary-slip/static/js/2.be733b0f.chunk.js.LICENSE.txt",
+    "static/media/digital_wolf_logo.a4b84cc4.png": "/sallary-slip/static/media/digital_wolf_logo.a4b84cc4.png",
+    "static/media/pdf.ba4a9de7.svg": "/sallary-slip/static/media/pdf.ba4a9de7.svg",
+    "static/media/word.baefbedd.svg": "/sallary-slip/static/media/word.baefbedd.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.68b3bc23.js",
-    "static/js/2.a2a410c6.chunk.js",
+    "static/js/runtime-main.fe4bc346.js",
+    "static/js/2.be733b0f.chunk.js",
     "static/css/main.745972c2.chunk.css",
     "static/js/main.2a3294a2.chunk.js"
   ]
