@@ -85,6 +85,12 @@ export function updatePan(value) {
         payload: value
     }
 }
+export function updateAadhar(value) {
+    return {
+        type: actionTypes.AADHAR,
+        payload: value
+    }
+}
 
 export function updateBasic(value) {
     return {
@@ -150,6 +156,12 @@ export function updateCompanyPanError(value) {
 export function updatePanError(value) {
     return {
         type: actionTypes.PAN_ERROR,
+        payload: value
+    }
+}
+export function updateAadharError(value) {
+    return {
+        type: actionTypes.AADHAR_ERROR,
         payload: value
     }
 }

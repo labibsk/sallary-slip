@@ -9,10 +9,7 @@ import {
     updateMonthlyBasicError,
     updateMonthlyGrossError,
     updatePanError,
-    updateOpeningError,
-    updateEarnedError,
-    updateAvailedError,
-    updateClosingError,
+    updateAadharError,
     updateBasicError,
     updateConveyanceAllowanceError,
     updateIncentiveError,
@@ -83,34 +80,39 @@ export default function isFormValid(store) {
         return false;
     }
     store.dispatch(updatePanError(false));
-
-    if (state.basic.length === 0) {
-        store.dispatch(updateBasicError(true));
+    if (state.aadhar.length === 0) {
+        store.dispatch(updateAadharError(true));
         return false;
     }
-    store.dispatch(updateBasicError(false));
+    store.dispatch(updateAadharError(false));
 
-    if (state.conveyanceAllowance.length === 0) {
-        store.dispatch(updateConveyanceAllowanceError(true));
-        return false;
-    }
-    store.dispatch(updateConveyanceAllowanceError(false));
+    // if (state.basic.length === 0) {
+    //     store.dispatch(updateBasicError(true));
+    //     return false;
+    // }
+    // store.dispatch(updateBasicError(false));
 
-    if (state.incentive.length === 0) {
-        store.dispatch(updateIncentiveError(true));
-        return false;
-    }
-    store.dispatch(updateIncentiveError(false));
+    // if (state.conveyanceAllowance.length === 0) {
+    //     store.dispatch(updateConveyanceAllowanceError(true));
+    //     return false;
+    // }
+    // store.dispatch(updateConveyanceAllowanceError(false));
 
-    if (state.incomeTax.length === 0) {
-        store.dispatch(updateIncomeTaxError(true));
-        return false;
-    }
-    store.dispatch(updateIncomeTaxError(false));
+    // if (state.incentive.length === 0) {
+    //     store.dispatch(updateIncentiveError(true));
+    //     return false;
+    // }
+    // store.dispatch(updateIncentiveError(false));
 
-    if (state.arrears.length === 0) {
-        store.dispatch(updateArrearsError(true));
-        return false;
-    }
+    // if (state.incomeTax.length === 0) {
+    //     store.dispatch(updateIncomeTaxError(true));
+    //     return false;
+    // }
+    // store.dispatch(updateIncomeTaxError(false));
+
+    // if (state.arrears.length === 0) {
+    //     store.dispatch(updateArrearsError(true));
+    //     return false;
+    // }
     return true;
 }

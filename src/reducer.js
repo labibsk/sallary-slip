@@ -22,6 +22,7 @@ const initial = {
     daysMonth: daysMonth.toString(),
     daysPayable: '',
     pan: '',
+    aadhar: '',
     basic: '',
     conveyanceAllowance: '',
     incentive: '',
@@ -29,7 +30,23 @@ const initial = {
     arrears: '',
     employeeIds: [],
     saving: false,
-    savingMessage: 'Saving..'
+    savingMessage: 'Saving..',
+    employeeIdError: false,
+    employeeNameError: false,
+    companyPanError: false,
+    panError: false,
+    aadharError: false,
+    bankNameError: false,
+    bankAccountNoError: false,
+    monthlyBasicError: false,
+    monthlyGrossError: false,
+    daysMonthError: false,
+    daysPayableError: false,
+    basicError: false,
+    conveyanceAllowanceError: false,
+    incentiveError: false,
+    incomeTaxError: false,
+    arrearsError: false
 }
 
 export default function reducer(state = initial, action) {
@@ -49,6 +66,7 @@ export default function reducer(state = initial, action) {
         case actionTypes.DAYS_MONTH: return { ...state, daysMonth: action.payload }
         case actionTypes.DAYS_PAYABLE: return { ...state, daysPayable: action.payload }
         case actionTypes.PAN: return { ...state, pan: action.payload }
+        case actionTypes.AADHAR: return { ...state, aadhar: action.payload }
         case actionTypes.BASIC: return { ...state, basic: action.payload }
         case actionTypes.CONVEYANCE_ALLOWANCE: return { ...state, conveyanceAllowance: action.payload }
         case actionTypes.INCENTIVE: return { ...state, incentive: action.payload }
@@ -63,6 +81,7 @@ export default function reducer(state = initial, action) {
         case actionTypes.EMPLOYEE_NAME_ERROR: return { ...state, employeeNameError: action.payload }
         case actionTypes.COMPANY_PAN_ERROR: return { ...state, companyPanError: action.payload }
         case actionTypes.PAN_ERROR: return { ...state, panError: action.payload }
+        case actionTypes.AADHAR_ERROR: return { ...state, aadharError: action.payload }
         case actionTypes.BANK_NAME_ERROR: return { ...state, bankNameError: action.payload }
         case actionTypes.BANK_ACCOUNT_NO_ERROR: return { ...state, bankAccountNoError: action.payload }
         case actionTypes.MONTHLY_BASIC_ERROR: return { ...state, monthlyBasicError: action.payload }
