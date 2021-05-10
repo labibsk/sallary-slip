@@ -9,7 +9,7 @@ const today = new Date();
 const daysMonth = monthDays(today);
 const initial = {
     date: today,
-    companyPan: 'IIHPS1460P',
+    companyPan: 'AAIFE5015H',
     employeeId: '',
     employeeName: '',
     dateOfJoining: today,

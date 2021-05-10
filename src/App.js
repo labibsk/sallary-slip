@@ -4,7 +4,6 @@ import 'date-fns';
 import EmployeeInfo from './components/EmployeeInfo';
 import Header from './components/Header';
 import PaymentInfo from './components/PaymentInfo';
-import LeaveInfo from './components/LeaveInfo';
 import SalaryBreakdown from './components/SalaryBreakdown';
 import Total from './components/Total';
 import NavBar from './components/NavBar';
@@ -75,7 +74,6 @@ function App() {
           <Header />
           <EmployeeInfo />
           <PaymentInfo />
-          <LeaveInfo />
           <SalaryBreakdown />
           <Total />
           {
