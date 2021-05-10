@@ -34,15 +34,6 @@ function SalarySlipTable({ data }) {
             <Row>
                 <EmptyCell style={{ flexGrow: '1' }} />
             </Row>
-            <LeaveBalance
-                opening={data.opening}
-                earned={data.earned}
-                availed={data.availed}
-                closing={data.closing}
-            />
-            <Row>
-                <EmptyCell style={{ flexGrow: '1' }} />
-            </Row>
             <SalaryBreakDown
                 basic={data.basic}
                 conveyanceAllowance={data.conveyanceAllowance}

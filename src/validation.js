@@ -84,31 +84,6 @@ export default function isFormValid(store) {
     }
     store.dispatch(updatePanError(false));
 
-
-    if (state.opening.length === 0) {
-        store.dispatch(updateOpeningError(true));
-        return false;
-    }
-    store.dispatch(updateOpeningError(false));
-
-    if (state.earned.length === 0) {
-        store.dispatch(updateEarnedError(true));
-        return false;
-    }
-    store.dispatch(updateEarnedError(false));
-
-    if (state.availed.length === 0) {
-        store.dispatch(updateAvailedError(true));
-        return false;
-    }
-    store.dispatch(updateAvailedError(false));
-
-    if (state.closing.length === 0) {
-        store.dispatch(updateClosingError(true));
-        return false;
-    }
-    store.dispatch(updateClosingError(false));
-
     if (state.basic.length === 0) {
         store.dispatch(updateBasicError(true));
         return false;

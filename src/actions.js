@@ -85,30 +85,7 @@ export function updatePan(value) {
         payload: value
     }
 }
-export function updateOpening(value) {
-    return {
-        type: actionTypes.OPENING,
-        payload: value
-    }
-}
-export function updateEarned(value) {
-    return {
-        type: actionTypes.EARNED,
-        payload: value
-    }
-}
-export function updateAvailed(value) {
-    return {
-        type: actionTypes.AVAILED,
-        payload: value
-    }
-}
-export function updateClosing(value) {
-    return {
-        type: actionTypes.CLOSING,
-        payload: value
-    }
-}
+
 export function updateBasic(value) {
     return {
         type: actionTypes.BASIC,
@@ -215,34 +192,6 @@ export function updateDaysMonthError(value) {
 export function updateDaysPayableError(value) {
     return {
         type: actionTypes.DAYS_PAYABLE_ERROR,
-        payload: value
-    }
-}
-
-export function updateOpeningError(value) {
-    return {
-        type: actionTypes.OPENING_ERROR,
-        payload: value
-    }
-}
-
-export function updateEarnedError(value) {
-    return {
-        type: actionTypes.EARNED_ERROR,
-        payload: value
-    }
-}
-
-export function updateAvailedError(value) {
-    return {
-        type: actionTypes.AVAILED_ERROR,
-        payload: value
-    }
-}
-
-export function updateClosingError(value) {
-    return {
-        type: actionTypes.CLOSING_ERROR,
         payload: value
     }
 }

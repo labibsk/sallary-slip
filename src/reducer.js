@@ -22,10 +22,6 @@ const initial = {
     daysMonth: daysMonth.toString(),
     daysPayable: '',
     pan: '',
-    opening: '',
-    earned: '',
-    availed: '',
-    closing: '',
     basic: '',
     conveyanceAllowance: '',
     incentive: '',
@@ -53,10 +49,6 @@ export default function reducer(state = initial, action) {
         case actionTypes.DAYS_MONTH: return { ...state, daysMonth: action.payload }
         case actionTypes.DAYS_PAYABLE: return { ...state, daysPayable: action.payload }
         case actionTypes.PAN: return { ...state, pan: action.payload }
-        case actionTypes.OPENING: return { ...state, opening: action.payload }
-        case actionTypes.EARNED: return { ...state, earned: action.payload }
-        case actionTypes.AVAILED: return { ...state, availed: action.payload }
-        case actionTypes.CLOSING: return { ...state, closing: action.payload }
         case actionTypes.BASIC: return { ...state, basic: action.payload }
         case actionTypes.CONVEYANCE_ALLOWANCE: return { ...state, conveyanceAllowance: action.payload }
         case actionTypes.INCENTIVE: return { ...state, incentive: action.payload }
@@ -77,10 +69,6 @@ export default function reducer(state = initial, action) {
         case actionTypes.MONTHLY_GROSS_ERROR: return { ...state, monthlyGrossError: action.payload }
         case actionTypes.DAYS_MONTH_ERROR: return { ...state, daysMonthError: action.payload }
         case actionTypes.DAYS_PAYABLE_ERROR: return { ...state, daysPayableError: action.payload }
-        case actionTypes.OPENING_ERROR: return { ...state, openingError: action.payload }
-        case actionTypes.EARNED_ERROR: return { ...state, earnedError: action.payload }
-        case actionTypes.AVAILED_ERROR: return { ...state, availedError: action.payload }
-        case actionTypes.CLOSING_ERROR: return { ...state, closingError: action.payload }
         case actionTypes.BASIC_ERROR: return { ...state, basicError: action.payload }
         case actionTypes.CONVEYANCE_ALLOWANCE_ERROR: return { ...state, conveyanceAllowanceError: action.payload }
         case actionTypes.INCENTIVE_ERROR: return { ...state, incentiveError: action.payload }
