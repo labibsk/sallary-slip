@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/salary-slip/static/css/main.745972c2.chunk.css",
+    "main.js": "/salary-slip/static/js/main.2a3294a2.chunk.js",
+    "main.js.map": "/salary-slip/static/js/main.2a3294a2.chunk.js.map",
+    "runtime-main.js": "/salary-slip/static/js/runtime-main.68b3bc23.js",
+    "runtime-main.js.map": "/salary-slip/static/js/runtime-main.68b3bc23.js.map",
+    "static/js/2.a2a410c6.chunk.js": "/salary-slip/static/js/2.a2a410c6.chunk.js",
+    "static/js/2.a2a410c6.chunk.js.map": "/salary-slip/static/js/2.a2a410c6.chunk.js.map",
+    "static/js/3.9bb8395b.chunk.js": "/salary-slip/static/js/3.9bb8395b.chunk.js",
+    "static/js/3.9bb8395b.chunk.js.map": "/salary-slip/static/js/3.9bb8395b.chunk.js.map",
+    "index.html": "/salary-slip/index.html",
+    "static/css/main.745972c2.chunk.css.map": "/salary-slip/static/css/main.745972c2.chunk.css.map",
+    "static/js/2.a2a410c6.chunk.js.LICENSE.txt": "/salary-slip/static/js/2.a2a410c6.chunk.js.LICENSE.txt",
+    "static/media/digital_wolf_logo.a4b84cc4.png": "/salary-slip/static/media/digital_wolf_logo.a4b84cc4.png",
+    "static/media/pdf.ba4a9de7.svg": "/salary-slip/static/media/pdf.ba4a9de7.svg",
+    "static/media/word.baefbedd.svg": "/salary-slip/static/media/word.baefbedd.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.68b3bc23.js",
+    "static/js/2.a2a410c6.chunk.js",
+    "static/css/main.745972c2.chunk.css",
+    "static/js/main.2a3294a2.chunk.js"
+  ]
+}
