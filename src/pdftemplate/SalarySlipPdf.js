@@ -4,6 +4,7 @@ import Header from './Header'
 import { Border } from './layouts'
 import SalarySlipTable from './SalarySlipTable'
 
+
 function SalarySlipPdf({ data }) {
     return (
         <Document>

@@ -10,7 +10,7 @@ function loadFile(url, callback) {
 }
 
 const generateDoc = (data) => {
-    loadFile("https://labibsk.github.io/sallaryslip/document/template.docx", function (
+    loadFile("https://labibsk.github.io/sallary-slip/document/template.docx", function (
         error,
         content
     ) {

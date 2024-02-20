@@ -1,17 +1,17 @@
-import styled from "@react-pdf/styled-components"
+import {default as styled} from "@react-pdf/styled-components"
 
-export const TableBorder = styled.View`
+export const TableBorder = styled(props => <styled.View {...props} />)`
     border:0.5pt solid #000;
     width:100%;
     margin-top:20pt;
 `
 
-export const Row = styled.View`
+export const Row = styled(props => <styled.View {...props} />)`
     display:flex;
     flex-direction:row;
 `
 
-export const Cell = styled.Text`
+export const Cell = styled(props => <styled.Text {...props} />)`
     border:0.5pt solid #000;
     padding:4pt 5.4pt 4pt 5.4pt;
     width:128pt;
@@ -19,7 +19,7 @@ export const Cell = styled.Text`
     font-family:'Lora';
     box-sizing:border-box;
 `
-export const BoldCell = styled.Text`
+export const BoldCell = styled(props => <styled.Text {...props} />)`
     border:0.5pt solid #000;
     padding:4pt 5.4pt 4pt 5.4pt;
     width:128pt;
@@ -29,7 +29,7 @@ export const BoldCell = styled.Text`
     box-sizing:border-box;
 `
 
-export const TopCell = styled.Text`
+export const TopCell = styled(props => <styled.Text {...props} />)`
     border-left:0.5pt solid #000;
     border-right:0.5pt solid #000;
     border-top:0.5pt solid #000;
@@ -39,7 +39,7 @@ export const TopCell = styled.Text`
     font-family:'Lora';
     box-sizing:border-box;
 `
-export const BottomCell = styled.Text`
+export const BottomCell = styled(props => <styled.Text {...props} />)`
     border-left:0.5pt solid #000;
     border-right:0.5pt solid #000;
     border-bottom:0.5pt solid #000;
@@ -50,7 +50,7 @@ export const BottomCell = styled.Text`
     width:128pt;
 `
 
-export const EmptyBottomCell = styled.Text`
+export const EmptyBottomCell = styled(props => <styled.Text {...props} />)`
     border-left:0.5pt solid #000;
     border-right:0.5pt solid #000;
     border-bottom:0.5pt solid #000;
@@ -61,7 +61,7 @@ export const EmptyBottomCell = styled.Text`
     width:128pt;
     height:20pt;
 `
-export const MiddleCell = styled.Text`
+export const MiddleCell = styled(props => <styled.Text {...props} />)`
     border-left:0.5pt solid #000;
     border-right:0.5pt solid #000;
     padding:4pt 5.4pt 4pt 5.4pt;
@@ -72,7 +72,7 @@ export const MiddleCell = styled.Text`
 `
 
 
-export const EmptyMiddleCell = styled.Text`
+export const EmptyMiddleCell = styled(props => <styled.Text {...props} />)`
     border-left:0.5pt solid #000;
     border-right:0.5pt solid #000;
     padding:4pt 5.4pt 4pt 5.4pt;
@@ -82,7 +82,7 @@ export const EmptyMiddleCell = styled.Text`
     width:128pt;
     box-sizing:border-box;
 `
-export const EmptyCell = styled.View`
+export const EmptyCell = styled(props => <styled.View {...props} />)`
     border:0.5pt solid #000;
     height:28pt;
     width:128pt;

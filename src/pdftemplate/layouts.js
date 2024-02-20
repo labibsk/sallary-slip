@@ -1,6 +1,6 @@
-import styled from '@react-pdf/styled-components'
+import {default as styled} from '@react-pdf/styled-components'
 
-export const Border = styled.View`
+export const Border = styled(props => <styled.View {...props} />)`
         width:100%;
         height:100%;
         border:1px solid #000;
@@ -9,13 +9,13 @@ export const Border = styled.View`
         flex-direction:column;
 `
 
-export const FlexHorizontal = styled.View`
+export const FlexHorizontal = styled(props => <styled.View {...props} />)`
         width:100%;
         display:flex;
         flex-direction:row;
 `
 
-export const FlexVertical = styled.View`
+export const FlexVertical = styled(props => <styled.View {...props} />)`
     display:flex;
     flex-direction:column;
 `

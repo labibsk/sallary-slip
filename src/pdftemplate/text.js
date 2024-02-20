@@ -1,4 +1,4 @@
-import styled from '@react-pdf/styled-components'
+import { default as styled } from '@react-pdf/styled-components'
 import { Font } from '@react-pdf/renderer'
 
 const basePath = "https://labibsk.github.io/invoicegen/fonts/"
@@ -14,21 +14,21 @@ Font.register({
         ]
 })
 
-export const LabelText = styled.Text`
+export const LabelText = styled(props => <styled.Text {...props} />)`
         font-family:'Lora';
         font-size:11pt;
         color:#000;
         font-weight:bold;
 `
 
-export const CompanyName = styled.Text`
+export const CompanyName = styled(props => <styled.Text {...props} />)`
         color:#000;
         font-family:'Lora';
         font-size:14pt;
         font-weight:bold;
         margin-left:8pt;
 `
-export const InvoiceTitle = styled.Text`
+export const InvoiceTitle = styled(props => <styled.Text {...props} />)`
         color:#000;
         font-family:'Lora';
         font-size:14pt;
@@ -37,7 +37,7 @@ export const InvoiceTitle = styled.Text`
         margin-top:4pt;
 `
 
-export const AddressLine = styled.Text`
+export const AddressLine = styled(props => <styled.Text {...props} />)`
         color:#000;
         font-family:'Lora';
         font-size:11pt;

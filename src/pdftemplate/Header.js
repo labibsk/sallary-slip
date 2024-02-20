@@ -37,22 +37,22 @@ function Header({ companyName, addressLine1, addressLine2, addressLine3, date })
 
 export default Header
 
-const CompanyAddress = styled.View`
+const CompanyAddress = styled(props => <styled.View {...props} />)`
     display:flex;
     flex-direction:column;
     flex-grow:1;
 `
-const PaySlipTitle = styled.View`
+const PaySlipTitle = styled(props => <styled.View {...props} />)`
     display:flex;
     flex-direction:column;
     align-items:flex-end;
 `
-const TitleLine = styled.Text`
+const TitleLine = styled(props => <styled.Text {...props} />)`
     font-family:'Lora';
     font-size:14pt;
     font-weight:bold;
 `
-const SubTitleLine = styled.Text`
+const SubTitleLine = styled(props => <styled.Text {...props} />)`
     font-family:'Lora';
     font-size:11pt;
     font-weight:bold;
