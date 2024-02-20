@@ -1,7 +1,7 @@
 import styled from '@react-pdf/styled-components'
 import { Font } from '@react-pdf/renderer'
 
-const basePath = "https://ismail-creatvt.github.io/invoicegen/fonts/"
+const basePath = "https://labibsk.github.io/invoicegen/fonts/"
 const regular = basePath + "Lora-Regular.ttf"
 const medium = basePath + "Lora-Medium.ttf"
 const bold = basePath + "Lora-Bold.ttf"
